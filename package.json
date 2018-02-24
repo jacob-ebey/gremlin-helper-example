@@ -1,0 +1,21 @@
+{
+  "name": "gremlin-helper-example",
+  "version": "0.0.11-alpha",
+  "description": "An example for gremlin-helper",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "author": "Jacob Ebey",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "google-libphonenumber": "^3.0.12",
+    "gremlin": "^2.7.0",
+    "gremlin-helper": "^0.0.11-alpha"
+  }
+}
