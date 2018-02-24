@@ -2,4 +2,6 @@ dist/
 node_modules/
 
 npm-debug.log
+tsconfig.test.json
 src/config.ts
+src/test.ts
