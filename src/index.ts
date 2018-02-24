@@ -20,12 +20,12 @@ async function run() {
 
   console.log('\nGetting data...');
 
-  const parkVisitorsQuery = new QueryBuilder().getAll(UserVertex).hasOutE(VisitedEdge).to(LocationVertex, park.id);
+  const parkVisitorsQuery = new QueryBuilder().getAllV(UserVertex).hasOutE(VisitedEdge).to(LocationVertex, park.id);
   const parkVisitors = await client.executeAsync(UserVertex, parkVisitorsQuery);
   console.log('\nPark Visitors:');
   console.log(JSON.stringify(parkVisitors, null, 2));
 
-  const museumVisitorsQuery = new QueryBuilder().getAll(UserVertex).hasOutE(VisitedEdge).to(LocationVertex, museum.id);
+  const museumVisitorsQuery = new QueryBuilder().getAllV(UserVertex).hasOutE(VisitedEdge).to(LocationVertex, museum.id);
   const museumVisitors = await client.executeAsync(UserVertex, museumVisitorsQuery);
   console.log('\nMuseum Visitors');
   console.log(JSON.stringify(museumVisitors, null, 2));
