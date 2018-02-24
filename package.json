@@ -4,7 +4,8 @@
   "description": "An example for gremlin-helper",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/index.js",
+    "dev": "tsc && node ./dist/example/src/test.js"
   },
   "author": "Jacob Ebey",
   "license": "ISC",
@@ -20,8 +21,7 @@
     "typescript": "^2.7.2"
   },
   "dependencies": {
-    "google-libphonenumber": "^3.0.12",
     "gremlin": "^2.7.0",
-    "gremlin-helper": "^0.0.14-alpha"
+    "gremlin-helper": "^0.0.15-alpha"
   }
 }
