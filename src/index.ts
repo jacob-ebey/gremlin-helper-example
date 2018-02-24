@@ -9,7 +9,7 @@ const client: Client = new Client(createClient, config);
 async function run() {
   console.log('\nCreating elements...');
   const user1 = await client.addVAsync(UserVertex, { name: 'user1', password: 'pass1', phone: '1-800-273-8255' });
-  const user2 = await client.addVAsync(UserVertex, { name: 'user2', password: 'pass2', phone: '800 273 8255' });
+  const user2 = await client.addVAsync(UserVertex, { name: 'user2', password: 'pass2', phone: '800273 8255' });
   const user3 = await client.addVAsync(UserVertex, { name: 'user3', password: 'pass3' });
   const park = await client.addVAsync(LocationVertex, { name: 'Central Park', latitude: 40.781921, longitude: -73.965542 });
   const museum = await client.addVAsync(LocationVertex, { name: 'The Metropolitan Museum of Art', latitude: 40.779385, longitude: -73.963192 });

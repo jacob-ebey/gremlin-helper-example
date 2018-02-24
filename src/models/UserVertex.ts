@@ -1,4 +1,4 @@
-import { Ops, Vertex, IVertexSchema } from 'gremlin-helper';
+import { Ops, Vertex, IPropDef, IVertexSchema } from 'gremlin-helper';
 
 export interface IUser {
   name: string;
@@ -21,13 +21,15 @@ const userSchema: IVertexSchema<IUser> = {
   }
 };
 
-const UserVertex = new Vertex(userSchema);
+export const UserVertex = new Vertex(userSchema);
 
 UserVertex.ops = {
+  password: (prop: IPropDef, value: string) => ({
+    error: null,
+    value: `${value}-hash-password-here`
+  }),
   phone: Ops.merge(
     Ops.validatePhone,
     Ops.formatPhone
   )
 };
-
-export { UserVertex }
