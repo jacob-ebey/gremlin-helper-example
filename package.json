@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "gremlin": "^2.7.0",
-    "gremlin-helper": "^0.0.19-alpha"
+    "gremlin-helper": "^0.0.20-alpha"
   }
 }
