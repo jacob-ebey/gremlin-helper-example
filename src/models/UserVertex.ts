@@ -24,10 +24,7 @@ const userSchema: IVertexSchema<IUser> = {
 export const UserVertex = new Vertex(userSchema);
 
 UserVertex.ops = {
-  password: (prop: IPropDef, value: string) => Promise.resolve({
-    error: null,
-    value: `${value}-hash-password-here`
-  }),
+  password: Ops.hashPassword(10000),
   phone: Ops.merge(
     Ops.validatePhone,
     Ops.formatPhone
